@@ -1,0 +1,117 @@
+// SCSS Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$font-stack: 'Roboto', sans-serif;
+$navbar-bg-color: $primary-color;
+$white: #fff;
+
+// Global styles
+* {
+    box-sizing: border-box;
+    font-family: $font-stack;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: $primary-color;
+    font-weight: bold;
+}
+
+footer {
+    background-color: $secondary-color;
+    color: $white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+// Navbar styling
+.navbar {
+    background-color: $navbar-bg-color;
+    .navbar-brand {
+        color: $white;
+        font-size: 1.2rem;
+        &:hover {
+            color: darken($white, 10%);
+        }
+    }
+    .nav-link {
+        color: $white;
+        &:hover {
+            color: darken($white, 10%);
+        }
+        &.active {
+            color: lighten($primary-color, 30%);
+        }
+    }
+}
+
+// Hero image
+#hero-image {
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    p {
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+}
+
+// List and table styling
+.list-unstyled {
+    list-style-type: none;
+    padding-left: 0;
+}
+.table {
+    th,
+    td {
+        border: 1px solid #dee2e6;
+        padding: 0.8rem;
+        vertical-align: top;
+        text-align: left;
+    }
+    th {
+        background-color: $primary-color;
+        color: $white;
+        font-weight: bold;
+    }
+}
+
+// Mobile responsive media query
+@media screen and (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+    }
+    .navbar-collapse {
+        display: none !important; // Bootstrap's default behavior for mobile
+    }
+    #hero-image {
+        height: 30vh;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+// Carousel-specific styles if needed
+.carousel-item {
+    // Your carousel specific styles here
+}
+
+// Contact form styles if needed
+.contact-form {
+    // Your contact form specific styles here
+}
