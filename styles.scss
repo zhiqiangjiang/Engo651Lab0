@@ -106,12 +106,110 @@ footer {
     }
 }
 
-// Carousel-specific styles if needed
-.carousel-item {
-    // Your carousel specific styles here
-}
+// Carousel-specific styles 
+.carousel {
+    position: sticky;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
 
-// Contact form styles if needed
-.contact-form {
-    // Your contact form specific styles here
+    .carousel-inner {
+        position: sticky;
+        width: 80%;
+        overflow: hidden;
+        display: flex;
+
+        .carousel-item {
+            display: none; // Bootstrap handles the active item's display with JS
+            height: 400px; // Adjust as needed for image height
+            background-size: cover;
+            background-position: center;
+            
+            img {
+                object-fit: cover;
+                max-width: 80%;
+                height: auto; // Maintain aspect ratio when resizing
+                display: block; // Allows centering with margin: auto
+                margin: 0 auto;
+            }
+        }
+
+        .carousel-item.active,
+        .carousel-item-next,
+        .carousel-item-prev {
+            display: block; // Ensure active, next, and previous items are visible
+        }
+        
+        @media (min-width: 768px) {
+            .carousel-item {
+                transition: transform 0.6s ease-in-out;
+            }
+        }
+    }
+
+    .carousel-indicators {
+        bottom: 2rem;
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+        text-align: center;
+        position: absolute;
+        z-index: 15;
+        
+        li {
+            box-sizing: content-box;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            width: 15px;
+            height: 15px;
+            margin-right: 3px;
+            margin-left: 3px;
+            text-indent: -999px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            
+            &.active {
+                background-color: white;
+            }
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        width: 40px;
+        height: 40px;
+        line-height: 35px;
+        font-size: 30px;
+        color: #ffffff;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0.5;
+        transition: all 0.3s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+        
+        &.carousel-control-prev {
+            left: 1rem;
+        }
+        
+        &.carousel-control-next {
+            right: 1rem;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: transparent no-repeat center center;
+            background-size: contain;
+        }
+    }
 }

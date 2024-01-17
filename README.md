@@ -1,15 +1,15 @@
 # Project 0
 
-ENGO 551 - Adv. Topics on Geospatial Technologies
+ENGO 651 - Adv. Topics on Geospatial Technologies
 
-# My Travel Adventures
+# My Travel Photos
 
-This personal webpage project showcases my travel experiences around the world. It's built using HTML5, Bootstrap 4, and SCSS.
+This personal webpage project showcases my travel photos around the world. It's built using HTML5, Bootstrap 4, and SCSS.
 
 ## Pages
 
-1. **index.html (Home):** Contains an introduction, a hero image, a list of top destinations, and a comparison table.
-2. **destinations.html:** Lists ordered by visited places with descriptions and links to more details.
+1. **index.html (Home):** Contains an introduction, a hero image, a list of top destinations.
+2. **destinations.html:** Lists ordered by visited places with descriptions.
 3. **gallery.html:** Features a responsive Bootstrap carousel displaying photos from different trips.
 4. **contact.html:** Provides contact information and an inquiry form arranged using the Bootstrap grid system.
 
