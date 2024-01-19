@@ -78,7 +78,8 @@ footer {
   position: sticky;
   width: 100%;
   overflow: hidden;
-  display: flex; }
+  display: flex;
+  justify-content: center; }
   .carousel .carousel-inner {
     position: sticky;
     width: 80%;
